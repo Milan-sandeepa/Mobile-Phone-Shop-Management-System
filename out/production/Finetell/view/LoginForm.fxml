@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBoardContext" prefHeight="796.0" prefWidth="1180.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane prefHeight="796.0" prefWidth="669.0" style="-fx-background-color: #00a8ff;">
+         <children>
+            <ImageView fitHeight="392.0" fitWidth="455.0" layoutX="107.0" layoutY="115.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../assets/store.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="751.0" layoutY="165.0" prefHeight="575.0" prefWidth="364.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="122.0" layoutY="73.0" text="Sign In">
+               <font>
+                  <Font name="System Bold" size="34.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="98.0" layoutY="186.0" prefHeight="40.0" prefWidth="178.0" promptText="User Name" />
+            <JFXPasswordField fx:id="pwdPassword" labelFloat="true" layoutX="98.0" layoutY="277.0" prefHeight="40.0" prefWidth="178.0" promptText="Password" />
+            <JFXButton buttonType="RAISED" layoutX="71.0" layoutY="377.0" onAction="#loginOnAction" prefHeight="40.0" prefWidth="199.0" style="-fx-background-color: #4cd137; -fx-border-radius: 20;" text="Login" textAlignment="CENTER" textFill="#141414">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></JFXButton>
+            <OctIconView glyphName="LOCK" layoutX="62.0" layoutY="312.0" size="30" wrappingWidth="29.99999810755253" />
+            <MaterialDesignIconView glyphName="ACCOUNT" layoutX="58.0" layoutY="223.0" size="30" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Label layoutX="73.0" layoutY="570.0" text="Hello!" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="627.0" text="Good Day To You" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="407.0" layoutX="730.0" layoutY="39.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
+      
+   </children>
+</AnchorPane>

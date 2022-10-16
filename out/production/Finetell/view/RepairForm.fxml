@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="repairContext" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RepairFormController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="12.0" prefHeight="48.0" prefWidth="932.0" style="-fx-background-color: #4cd137; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow color="#00000044" />
+         </effect>
+         <children>
+            <Label layoutX="23.0" layoutY="12.0" text="Repairs" textFill="#f2f2f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblRepairs" layoutX="21.0" layoutY="406.0" prefHeight="479.0" prefWidth="1359.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colrId" prefWidth="160.3333282470703" text="Repair ID" />
+            <TableColumn fx:id="colId" prefWidth="124.66665649414062" text="Customer ID" />
+            <TableColumn fx:id="colDate" prefWidth="201.66665649414062" text="Date" />
+            <TableColumn fx:id="colTime" prefWidth="198.3333740234375" text="Time" />
+            <TableColumn fx:id="colCharge" prefWidth="250.99993896484375" text="Charge" />
+            <TableColumn fx:id="colStatus" prefWidth="142.6666259765625" text="Status" />
+            <TableColumn fx:id="colDesc" prefWidth="277.0" text="Description" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveButton" buttonType="RAISED" layoutX="1275.0" layoutY="299.0" onAction="#btnSaveOnAction" onMouseReleased="#posEvent" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Add" textFill="#f2f2f2" />
+      <JFXButton fx:id="btnUpdateButton" buttonType="RAISED" layoutX="1164.0" layoutY="299.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Update" textFill="#f2f2f2" />
+      <Label layoutX="1116.0" layoutY="24.0" text="Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1168.0" layoutY="24.0" text="2022-03-19" textFill="WHITE" />
+      <Label layoutX="1260.0" layoutY="24.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1314.0" layoutY="24.0" text="10:20:35" textFill="WHITE" />
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="35.0" layoutY="119.0" prefHeight="31.0" prefWidth="233.0" promptText="Select Customer" />
+      <Label layoutX="35.0" layoutY="86.0" text="Customer Id">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtName" editable="false" labelFloat="true" layoutX="351.0" layoutY="119.0" prefHeight="31.0" prefWidth="249.0" promptText="Customer Name" />
+      <JFXTextField fx:id="txtAddress" editable="false" labelFloat="true" layoutX="648.0" layoutY="120.0" prefHeight="31.0" prefWidth="350.0" promptText="Address" />
+      <JFXTextField fx:id="txtContact" editable="false" labelFloat="true" layoutX="1066.0" layoutY="120.0" prefHeight="31.0" prefWidth="226.0" promptText="Contact" />
+      <JFXButton buttonType="RAISED" layoutX="1323.0" layoutY="113.0" onAction="#openNewCustomerOnAction" prefHeight="39.0" prefWidth="50.0" style="-fx-background-color: #00a8ff;" text="+" textFill="#f2f2f2">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtId" labelFloat="true" layoutX="41.0" layoutY="234.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="187.0" promptText="Search Repair ID" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtCost" labelFloat="true" layoutX="358.0" layoutY="235.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="198.0" promptText="Charge" style="-fx-background-color: white;" />
+      <JFXComboBox fx:id="txtStatus" layoutX="648.0" layoutY="235.0" prefHeight="31.0" prefWidth="233.0" promptText="Select Status" />
+      <JFXButton fx:id="btnDeleteButton" buttonType="RAISED" layoutX="1055.0" layoutY="300.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Delete" textFill="#f2f2f2" />
+      <JFXButton buttonType="RAISED" layoutX="951.0" layoutY="300.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Search" textFill="#f2f2f2" />
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="39.0" layoutY="322.0" onKeyReleased="#textFields_Key_Released" prefHeight="52.0" prefWidth="439.0" promptText="Description" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

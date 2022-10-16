@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="employeeContext" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeFormController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="12.0" prefHeight="48.0" prefWidth="932.0" style="-fx-background-color: #4cd137; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow color="#00000044" />
+         </effect>
+         <children>
+            <Label layoutX="23.0" layoutY="12.0" text="Add Employe" textFill="#f2f2f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="38.0" layoutY="76.0" text="Employe Id">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="311.0" layoutY="76.0" text="Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmployee" layoutX="21.0" layoutY="375.0" prefHeight="506.0" prefWidth="1359.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="101.00000762939453" text="ID" />
+            <TableColumn fx:id="colType" prefWidth="98.33332824707031" text="Type" />
+            <TableColumn fx:id="colName" prefWidth="201.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="216.66668701171875" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="149.0" text="Contact" />
+            <TableColumn fx:id="colGender" prefWidth="89.33331298828125" text="Gender" />
+            <TableColumn fx:id="colBirthday" prefWidth="110.33331298828125" text="BirthDay" />
+            <TableColumn fx:id="colJoinDate" prefWidth="107.66668701171875" text="Join Date" />
+            <TableColumn fx:id="colSalary" prefWidth="113.0" text="Salary" />
+            <TableColumn fx:id="colEmail" prefWidth="193.6666259765625" text="Email" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="btnSaveButton" buttonType="RAISED" layoutX="1289.0" layoutY="314.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Add" textFill="#f2f2f2" />
+      <JFXTextField fx:id="txtId" layoutX="38.0" layoutY="102.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="206.0" promptText="Search Id" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtName" layoutX="309.0" layoutY="102.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtContact" layoutX="564.0" layoutY="102.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtEmail" layoutX="564.0" layoutY="164.0" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: white;" />
+      <JFXButton fx:id="btnUpdateButton" buttonType="RAISED" layoutX="1179.0" layoutY="314.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Update" textFill="#f2f2f2" />
+      <JFXDatePicker fx:id="txtJoinDate" layoutX="39.0" layoutY="227.0" promptText="Join Date" />
+      <JFXComboBox fx:id="cmbGender" labelFloat="true" layoutX="38.0" layoutY="164.0" promptText="Gender" />
+      <JFXDatePicker fx:id="txtBirthDay" layoutX="311.0" layoutY="227.0" promptText="Birth Day" />
+      <JFXTextField fx:id="txtSalary" layoutX="821.0" layoutY="100.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="225.0" style="-fx-background-color: white;" />
+      <JFXComboBox fx:id="cmbType" labelFloat="true" layoutX="311.0" layoutY="164.0" promptText="Type" />
+      <JFXButton fx:id="btnDeleteButton" buttonType="RAISED" layoutX="1072.0" layoutY="314.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Delete" textFill="#f2f2f2" />
+      <JFXButton buttonType="RAISED" layoutX="971.0" layoutY="314.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Search" textFill="#f2f2f2" />
+      <Label layoutX="564.0" layoutY="76.0" text="Contact">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="821.0" layoutY="77.0" text="Salary">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1116.0" layoutY="77.0" text="Address">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="564.0" layoutY="144.0" text="E-mail">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" layoutX="1116.0" layoutY="101.0" onKeyReleased="#textFields_Key_Released" prefHeight="31.0" prefWidth="225.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="returnContext" prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnFormController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="12.0" prefHeight="48.0" prefWidth="932.0" style="-fx-background-color: #4cd137; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow color="#00000044" />
+         </effect>
+         <children>
+            <Label layoutX="23.0" layoutY="12.0" text="Returns" textFill="#f2f2f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="38.0" layoutY="96.0" text="Order Id">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="354.0" layoutY="97.0" text="Customer Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="183.0" text="Note">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblReturns" layoutX="21.0" layoutY="364.0" prefHeight="508.0" prefWidth="959.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="152.66665649414062" text=" ID" />
+            <TableColumn fx:id="colOrderId" prefWidth="187.33334350585938" text="Order ID" />
+            <TableColumn fx:id="colName" prefWidth="339.33331298828125" text="Customer Name" />
+            <TableColumn fx:id="colNote" prefWidth="386.33331298828125" text="Note" />
+            <TableColumn fx:id="colTotal" prefWidth="293.99993896484375" text="Total" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1258.0" layoutY="301.0" onAction="#btnReturnOnAction" prefHeight="39.0" prefWidth="119.0" style="-fx-background-color: #00a8ff;" text="Return Order" textFill="#f2f2f2" />
+      <JFXTextField fx:id="txtId" layoutX="38.0" layoutY="127.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="206.0" promptText="Search Id" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtName" editable="false" layoutX="353.0" layoutY="128.0" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: white;" />
+      <JFXTextArea fx:id="txtNote" layoutX="42.0" layoutY="215.0" prefHeight="25.0" prefWidth="254.0" style="-fx-background-color: white;" />
+      <Label layoutX="1164.0" layoutY="179.0" text="Total">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTotal" editable="false" layoutX="1165.0" layoutY="208.0" prefHeight="31.0" prefWidth="206.0" style="-fx-border-color: green;" />
+      <Label layoutX="1115.0" layoutY="24.0" text="Date :" textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="1167.0" layoutY="24.0" text="2022-03-19" textFill="#0a0a0a" />
+      <Label layoutX="1259.0" layoutY="24.0" text="Time :" textFill="#0a0a0a">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="1313.0" layoutY="24.0" text="10:20:35" textFill="#0a0a0a" />
+      <JFXButton buttonType="RAISED" layoutX="284.0" layoutY="301.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="119.0" style="-fx-background-color: #00a8ff;" text="Delete" textFill="#f2f2f2" />
+      <JFXButton buttonType="RAISED" layoutX="1118.0" layoutY="301.0" onAction="#btnSearchOnAction" prefHeight="39.0" prefWidth="119.0" style="-fx-background-color: #00a8ff;" text="Search" textFill="#f2f2f2" />
+      <Label layoutX="661.0" layoutY="98.0" text="Order Date">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDate" editable="false" layoutX="660.0" layoutY="129.0" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: white;" />
+      <Label layoutX="981.0" layoutY="97.0" text="Order Time">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtTime" editable="false" layoutX="985.0" layoutY="129.0" prefHeight="31.0" prefWidth="206.0" style="-fx-background-color: white;" />
+      <JFXTextField fx:id="txtRid" layoutX="47.0" layoutY="304.0" onAction="#txtReturnSearchOnAction" prefHeight="31.0" prefWidth="206.0" promptText="Search Id" />
+   </children>
+</AnchorPane>

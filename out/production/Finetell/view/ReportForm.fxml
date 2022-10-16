@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1400.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="12.0" prefHeight="48.0" prefWidth="932.0" style="-fx-background-color: #4cd137; -fx-background-radius: 5;" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="15.0">
+         <effect>
+            <DropShadow color="#00000044" />
+         </effect>
+         <children>
+            <Label layoutX="23.0" layoutY="12.0" text="Reports" textFill="#f2f2f2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TableView layoutX="21.0" layoutY="145.0" prefHeight="647.0" prefWidth="961.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="1289.0" layoutY="829.0" prefHeight="39.0" prefWidth="91.0" style="-fx-background-color: #00a8ff;" text="Print" textFill="#f2f2f2" />
+      <JFXComboBox layoutX="24.0" layoutY="81.0" promptText="Weekly" />
+   </children>
+</AnchorPane>
